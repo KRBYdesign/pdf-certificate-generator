@@ -1,0 +1,24 @@
+{
+    "name": "kyle/pdf-certificate-generator",
+    "description": "a small web-app to quickly generate PDF certificates for course participants",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kyle Beasley",
+            "email": "kyle.beasley17@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : ">8.1"
+    },
+    "autoload" : {
+        "files" : [
+            "./app/global.php"
+        ],
+        "psr-4" : {
+            "App\\" : "./app"
+        }
+    }
+}
