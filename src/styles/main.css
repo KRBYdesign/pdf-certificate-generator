@@ -84,17 +84,23 @@ header {
 }
 .input-container  input{
     width: 300px;
+    outline: 1px solid var(--text);
+    padding: 5px;
 }
 .input-container select {
     width: 300px;
     background-color: var(--background);
+    color: var(--text);
+    padding: 5px;
 }
 
 #configuration-form {
+    margin: 5rem auto;
     width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 2rem;
+    row-gap: 1rem;
+    background-color: var(--secondary);
 }
