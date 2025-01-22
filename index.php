@@ -1,5 +1,7 @@
 <?php
 
+require_once "vendor/autoload.php";
+
 if ($_SERVER['REQUEST_METHOD'] !== "GET") {
     http_response_code(405);
     exit("Method not allowed");
