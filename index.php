@@ -53,6 +53,8 @@ try {
             <button type="button" class="button button-primary" id="config-submit">Generate</button>
         </div>
 
+        <a href="" id="csv-download" class="copy">Download CSV Template Here</a>
+
         <script src="index.js"></script>
     </body>
 </html>
