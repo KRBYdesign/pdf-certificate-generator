@@ -49,7 +49,9 @@ try {
 
         </form>
 
-        <button type="button" class="button button-primary">Generate</button>
+        <div id="config-controls">
+            <button type="button" class="button button-primary" id="config-submit">Generate</button>
+        </div>
 
         <script src="index.js"></script>
     </body>

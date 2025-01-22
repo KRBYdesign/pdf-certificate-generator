@@ -89,6 +89,7 @@ header {
 }
 .input-container select {
     width: 450px;
+    outline: 1px solid var(--text);
     background-color: var(--background);
     color: var(--text);
     padding: 5px;
@@ -107,4 +108,11 @@ header {
     justify-content: center;
     row-gap: 1rem;
     background-color: var(--secondary);
+}
+#config-controls {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
 }

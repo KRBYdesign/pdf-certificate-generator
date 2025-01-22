@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: center;
     font-weight: 700;
+    font-size: 1.17rem;
+    padding: 1rem 3rem
 }
 .button-primary {
     background-color: var(--primary);
