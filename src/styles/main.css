@@ -34,6 +34,9 @@ input {
     font-size: clamp(15px, 1.17rem, 20px);
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
+    background-color: var(--background);
+    border: none;
+    border-radius: .25rem;
 }
 
 header {
@@ -70,4 +73,28 @@ header {
 }
 .header .menu .link {
     text-decoration: none;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    row-gap: 1rem;
+}
+.input-container  input{
+    width: 255ch;
+}
+.input-container select {
+    width: 255ch;
+    background-color: var(--background);
+}
+
+#configuration-form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
 }
