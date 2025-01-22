@@ -7,7 +7,11 @@
     justify-content: center;
     font-weight: 700;
     font-size: 1.17rem;
-    padding: 1rem 3rem
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+.button:hover {
+    box-shadow: 5px 5px 8px var(--text);
 }
 .button-primary {
     background-color: var(--primary);

@@ -51,6 +51,7 @@ try {
 
         <div id="config-controls">
             <button type="button" class="button button-primary" id="config-submit">Generate</button>
+            <button type="button" class="button button-secondary" id="config-reset">Reset</button>
         </div>
 
         <a href="./storage/templates/certificate-csv-template.csv" id="csv-download" target="_blank" download>Download CSV Template Here</a>
