@@ -53,7 +53,7 @@ try {
             <button type="button" class="button button-primary" id="config-submit">Generate</button>
         </div>
 
-        <a href="./" id="csv-download">Download CSV Template Here</a>
+        <a href="./storage/templates/certificate-csv-template.csv" id="csv-download" target="_blank" download>Download CSV Template Here</a>
 
         <script src="index.js"></script>
     </body>
