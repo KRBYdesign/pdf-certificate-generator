@@ -1,9 +1,9 @@
 <header>
-    <div class="header title">
+    <div class="header">
         <h1 class="text-logo">PDF Generator</h1>
 
-        <nav class="menu">
+<!--        <nav class="menu">-->
 <!--            <a href="./index.php" class="copy link">Home</a>-->
-        </nav>
+<!--        </nav>-->
     </div>
 </header>
