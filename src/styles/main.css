@@ -83,10 +83,10 @@ header {
     row-gap: 1rem;
 }
 .input-container  input{
-    width: 255ch;
+    width: 300px;
 }
 .input-container select {
-    width: 255ch;
+    width: 300px;
     background-color: var(--background);
 }
 
