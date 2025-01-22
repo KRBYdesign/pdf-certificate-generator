@@ -1,34 +1,45 @@
 <?php
 
+if ($_SERVER['REQUEST_METHOD'] !== "GET") {
+    http_response_code(405);
+    exit("Method not allowed");
+}
 
+try {
+    $head = includeAndReplaceContents('includes/head.php', [
+        'pageTitle' => 'Certificate Generator',
+    ]);
+
+    $header = includeAndReplaceContents('includes/header.php');
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Certificate Generator</title>
-        <link rel="stylesheet" href="./main.css">
-    </head>
+    <?php if (isset($head)) { echo $head; } ?>
+
     <body>
+        <?php if (isset($header)) { echo $header; } ?>
+
         <form action='./process.php' method="post">
             <div class='input-container'>
-                <label for='file-prefix'>File Prefix</label>
-                <input type='text' name='file-prefix' required />
+                <label for='file-prefix'>File Prefix
+                    <input type='text' name='file-prefix' required />
+                </label>
             </div>
 
             <div class='input-container'>
-                <label for='pdf-template'>File Prefix</label>
-
-                <select>
-                    <option value='premortem-training'>Premortem Training</option>
-                    <!-- <option value=''></option>
-                    <option value=''></option> -->
-                </select>
+                <label for='pdf-template'>Certificate Template
+                    <select name="pdf-template">
+                        <option value='premortem-training'>Premortem Training</option>
+                        <!-- <option value=''></option>
+                        <option value=''></option> -->
+                    </select>
+                </label>
             </div>
         </form> 
 
