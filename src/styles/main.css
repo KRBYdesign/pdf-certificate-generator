@@ -118,6 +118,7 @@ header {
 }
 
 #csv-download {
+    width: fit-content;
     text-decoration: underline;
     margin: 2rem auto;
 }
