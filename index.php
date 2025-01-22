@@ -1,10 +1,9 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 require_once "./vendor/autoload.php";
+
+// turn on error reporting for now
+errorReporting();
 
 if ($_SERVER['REQUEST_METHOD'] !== "GET") {
     http_response_code(405);
@@ -41,6 +40,7 @@ try {
             <div class='input-container'>
                 <label for='pdf-template'>Certificate Template
                     <select name="pdf-template">
+                        <option value='default' disabled selected>Select A Template</option>
                         <option value='premortem-training'>Premortem Training</option>
                         <!-- <option value=''></option>
                         <option value=''></option> -->
