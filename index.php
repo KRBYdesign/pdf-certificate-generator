@@ -33,7 +33,7 @@ try {
         <form action='./process.php' method="post" id="configuration-form">
 
             <label for='file-prefix' class="input-container">File Prefix
-                <input type='text' name='file-prefix' required />
+                <input type='text' name='file-prefix' />
             </label>
 
             <label for='pdf-template' class="input-container">Certificate Template
@@ -43,7 +43,13 @@ try {
                 </select>
             </label>
 
-        </form> 
+            <label for="csv-upload" class="input-container">CSV Upload
+                <input type="file" name="csv-upload" />
+            </label>
+
+        </form>
+
+        <button type="button" class="button button-primary">Generate</button>
 
         <script src="index.js"></script>
     </body>

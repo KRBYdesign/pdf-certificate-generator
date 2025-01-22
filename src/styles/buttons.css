@@ -1,0 +1,21 @@
+.button {
+    border: none;
+    border-radius: 0;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+.button-primary {
+    background-color: var(--primary);
+    color: var(--text);
+}
+.button-secondary {
+    background-color: var(--secondary);
+    color: var(--text);
+}
+.button-accent {
+    background-color: var(--accent);
+    color: var(--text);
+}
