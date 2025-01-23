@@ -35,11 +35,19 @@ function updateFormFields(data) {
     })
 
     // show required fields
+    let fields = null;
     for (let key in data) {
-        console.log(key);
+        if (key === "fields") {
+            fields = key;
+        }
     }
 
-    // clear and hide non-required fields
+    if (fields) {
+        console.log('Fields: ', fields);
+        console.log(typeof fields);
+    } else {
+        alert("Could not load required fields.");
+    }
 }
 
 function showOptionalField(field) {
