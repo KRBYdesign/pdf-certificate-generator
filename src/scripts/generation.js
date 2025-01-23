@@ -38,7 +38,7 @@ function updateFormFields(data) {
     let fields = null;
     for (let key in data) {
         if (key === "fields") {
-            fields = key;
+            fields = data[key];
         }
     }
 
