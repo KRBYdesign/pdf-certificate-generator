@@ -10,7 +10,7 @@ document.getElementById('config-submit').addEventListener('click', () => {
 
 // Form Reset
 document.getElementById('config-reset').addEventListener('click', () => {
-    // reset all the fields to their defaults
+    // reset the textareas and inputs to default values
     let inputs = document.querySelectorAll('input');
     let textAreas = document.querySelectorAll('textarea');
 
@@ -20,6 +20,9 @@ document.getElementById('config-reset').addEventListener('click', () => {
     textAreas.forEach((el) => {
         el.value = "";
     });
+
+    // reset the cert selection to the default
+    certSelection.selectedIndex = 0;
 
     // hide all optional fields
     optionalFields.forEach((el) => {

@@ -30,7 +30,7 @@ label {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
 }
-input {
+input, textarea {
     color: var(--text);
     font-size: clamp(15px, 1.17rem, 20px);
     font-family: "Helvetica Neue", Arial, sans-serif;
