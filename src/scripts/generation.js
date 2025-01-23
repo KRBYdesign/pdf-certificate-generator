@@ -15,7 +15,9 @@ document.getElementById('config-submit').addEventListener('click', () => {
     // add all the visible optional fields
     optionalFields.forEach((field) => {
         if (!field.classList.contains('hidden')) {
-            visibleFields.push(field.firstChild);
+            console.log(`pushing ${field.firstElementChild}`)
+
+            visibleFields.push(field.firstElementChild);
         }
     });
 
