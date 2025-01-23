@@ -10,7 +10,7 @@ document.getElementById('config-submit').addEventListener('click', () => {
     // add the basic 3 fields as they're always needed
     visibleFields.push(document.querySelector('input[name="file-prefix"]'));
     visibleFields.push(document.querySelector('input[name="csv-upload"]'));
-    visibleFields.push(document.querySelector('input[name="pdf-template"]'));
+    visibleFields.push(document.querySelector('select[name="pdf-template"]'));
 
     // add all the visible optional fields
     optionalFields.forEach((field) => {
