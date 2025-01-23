@@ -47,13 +47,33 @@ try {
             <label for='pdf-template' class="input-container">Certificate Template
                 <select name="pdf-template">
                     <option value='default' disabled selected>Select A Template</option>
-                    <option value='cert-of-completion'>Certificate of Completion</option>
+                    <option value='cert-of-completion-combo'>Certificate of Completion (Combo)</option>
+                    <option value='cert-of-completion-tnt'>Certificate of Completion (TNT)</option>
+                    <option value='cert-of-completion-bh'>Certificate of Completion (BH)</option>
                 </select>
             </label>
 
             <!-- Optional / Hidden Fields -->
 
-            <label for=""
+            <label class="optional hidden" for="course-title">
+                <input type="text" name="course-title" />
+            </label>
+
+            <label class="optional hidden" for="course-date">
+                <input type="date" name="course-date" />
+            </label>
+
+            <label class="optional hidden" for="course-location">
+                <input type="text" name="course-location" />
+            </label>
+
+            <label class="optional hidden" for="instructor-name">
+                <input type="text" name="instructor-name" />
+            </label>
+
+            <label class="optional hidden" for="instructor-title">
+                <input type="text" name="instructor-title" />
+            </label>
 
         </form>
 
@@ -64,6 +84,6 @@ try {
 
         <a href="./storage/templates/certificate-csv-template.csv" id="csv-download" target="_blank" download>Download CSV Template Here</a>
 
-        <script src="index.js"></script>
+        <script src="./src/scripts/generation.js"></script>
     </body>
 </html>

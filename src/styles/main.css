@@ -136,3 +136,7 @@ header {
     color: var(--text);
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
+
+.hidden {
+    display: none;
+}
