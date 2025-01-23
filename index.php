@@ -55,23 +55,23 @@ try {
 
             <!-- Optional / Hidden Fields -->
 
-            <label class="optional hidden" for="course-title">
+            <label class="input-container optional hidden" for="course-title">Course Title
                 <input type="text" name="course-title" />
             </label>
 
-            <label class="optional hidden" for="course-date">
+            <label class="input-container optional hidden" for="course-date">Course Date
                 <input type="date" name="course-date" />
             </label>
 
-            <label class="optional hidden" for="course-location">
+            <label class="input-container optional hidden" for="course-location">Course Location
                 <input type="text" name="course-location" />
             </label>
 
-            <label class="optional hidden" for="instructor-name">
+            <label class="input-container optional hidden" for="instructor-name">Instructor Name
                 <input type="text" name="instructor-name" />
             </label>
 
-            <label class="optional hidden" for="instructor-title">
+            <label class="input-container optional hidden" for="instructor-title">Instructor Title
                 <input type="text" name="instructor-title" />
             </label>
 
