@@ -44,7 +44,7 @@ try {
             </label>
 
             <label for="csv-upload" class="input-container">CSV Upload
-                <input type="file" name="csv-upload" />
+                <input type="file" name="csv-upload" accept="text/csv, .csv"/>
             </label>
 
         </form>
