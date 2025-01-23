@@ -11,9 +11,11 @@ document.getElementById('config-reset').addEventListener('click', () => {
 });
 
 // Change form based on certificate selection
-document.querySelector('select[name="pdf-template"]').addEventListener('change', async () => {
+const certSelection = document.querySelector('select[name="pdf-template"]');
+certSelection.addEventListener('change', async () => {
     console.log('cert selection changed');
-    const selectedCertificate = document.querySelector('select[name="pdf-template"]').value();
+    const selectedCertificate = certSelection.value;
+
     // get the instructions for the selected template
     const url = `./storage/data/${selectedCertificate}.json`;
 
