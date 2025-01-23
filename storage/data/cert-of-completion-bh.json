@@ -1,0 +1,37 @@
+{
+  "fields" : {
+    "course-title" : {
+      "font-family" : "Arial",
+      "font-weight" : 800,
+      "font-size" : 32,
+      "text-align" : "center"
+    },
+    "course-location" : {
+      "font-family" :  "Arial",
+      "font-weight" :  500,
+      "font-size" :  12,
+      "text-align" :  "center"
+    },
+    "course-date" : {
+      "font-family" :  "Arial",
+      "font-weight" :  500,
+      "font-size" :  12,
+      "text-align" :  "center"
+    },
+    "instructor-name" : {
+      "font-family" :  "Arial",
+      "font-weight" :  500,
+      "font-size" :  12,
+      "text-align" :  "center"
+    },
+    "instructor-title" :  {
+      "font-family" :  "Arial",
+      "font-weight" :  500,
+      "font-size" :  12,
+      "text-align" :  "center"
+    }
+  },
+  "build" : {
+    "template" : "storage/templates/certificates/cert-of-completion-bh.html"
+  }
+}
