@@ -15,18 +15,26 @@ document.getElementById('config-submit').addEventListener('click', () => {
     // add all the visible optional fields
     optionalFields.forEach((field) => {
         if (!field.classList.contains('hidden')) {
-            console.log(`pushing ${field.firstElementChild}`)
-
+            // the first element should be an input
+            // push it onto the array of visible elements
             visibleFields.push(field.firstElementChild);
         }
     });
 
     // verify the fields have content
+    let readyToSubmit = true;
     visibleFields.forEach((field) => {
-        console.log(`Name: ${field.name}`, `Value: ${field.value}`);
+        if (field.value === "" || field.value === null) {
+            readyToSubmit = false;
+        }
     })
 
     // submit form
+    if (readyToSubmit) {
+        console.log("Will Submit");
+    } else {
+        console.log("Will NOT Submit");
+    }
 });
 
 // Form Reset
