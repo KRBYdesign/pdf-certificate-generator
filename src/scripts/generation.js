@@ -1,3 +1,6 @@
+const optionalFields = document.querySelectorAll('label.optional');
+const certSelection = document.querySelector('select[name="pdf-template"]');
+
 // Form Validate and Submit
 document.getElementById('config-submit').addEventListener('click', () => {
     // validate all visible fields
@@ -7,13 +10,26 @@ document.getElementById('config-submit').addEventListener('click', () => {
 
 // Form Reset
 document.getElementById('config-reset').addEventListener('click', () => {
-    // reset the form
+    // reset all the fields to their defaults
+    let inputs = document.querySelectorAll('input');
+    let textAreas = document.querySelectorAll('textarea');
+
+    inputs.forEach((el) => {
+        el.value = "";
+    });
+    textAreas.forEach((el) => {
+        el.value = "";
+    });
+
+    // hide all optional fields
+    optionalFields.forEach((el) => {
+       el.classList.add('hidden');
+    });
 });
 
 // Change form based on certificate selection
-const certSelection = document.querySelector('select[name="pdf-template"]');
 certSelection.addEventListener('change', async () => {
-    console.log('cert selection changed');
+    // console.log('cert selection changed');
     const selectedCertificate = certSelection.value;
 
     // get the instructions for the selected template
@@ -27,9 +43,8 @@ certSelection.addEventListener('change', async () => {
 });
 
 function updateFormFields(data) {
-    console.log("Updating form fields.");
+    // console.log("Updating form fields.");
     // hide all fields
-    const optionalFields = document.querySelectorAll('label.optional');
     optionalFields.forEach((opt) => {
         opt.classList.add('hidden');
     })
@@ -52,7 +67,7 @@ function updateFormFields(data) {
 }
 
 function showOptionalField(field) {
-    console.log("Showing ", field);
+    // console.log("Showing ", field);
     // match the required field to the "for" tag and un-hide it
     document.querySelector(`label[for="${field}"]`).classList.remove('hidden');
 }
