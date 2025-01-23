@@ -87,6 +87,14 @@ header {
     outline: 1px solid var(--text);
     padding: 5px;
 }
+.input-container textarea {
+    width: 450px;
+    outline: 1px solid var(--text);
+    padding: 5px;
+    resize: vertical;
+    min-height: 1rem;
+    max-height: 3rem;
+}
 .input-container select {
     width: 450px;
     outline: 1px solid var(--text);
