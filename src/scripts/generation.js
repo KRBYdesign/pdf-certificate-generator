@@ -1,9 +1,28 @@
 const optionalFields = document.querySelectorAll('label.optional');
 const certSelection = document.querySelector('select[name="pdf-template"]');
+const configForm = document.getElementById('configuration-form');
 
-// Form Validate and Submit
+// Form Validation and Submission
 document.getElementById('config-submit').addEventListener('click', () => {
-    // validate all visible fields
+    // gather the fields that should be validated
+    let visibleFields = [];
+
+    // add the basic 3 fields as they're always needed
+    visibleFields.push(document.querySelector('input[name="file-prefix"]'));
+    visibleFields.push(document.querySelector('input[name="csv-upload"]'));
+    visibleFields.push(document.querySelector('input[name="pdf-template"]'));
+
+    // add all the visible optional fields
+    optionalFields.forEach((field) => {
+        if (!field.classList.contains('hidden')) {
+            visibleFields.push(field);
+        }
+    });
+
+    // verify the fields have content
+    visibleFields.forEach((field) => {
+        console.log(`Name: ${field.name}`, `Value: ${field.value}`);
+    })
 
     // submit form
 });

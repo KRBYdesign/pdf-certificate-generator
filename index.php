@@ -46,7 +46,7 @@ try {
 
             <label for='pdf-template' class="input-container">Certificate Template
                 <select name="pdf-template">
-                    <option value='default' disabled selected>Select A Template</option>
+                    <option value='' disabled selected>Select A Template</option>
 
                     <optgroup label="BadgeHire">
                         <option value='cert-of-completion-bh'>Certificate of Completion (BH)</option>
