@@ -47,16 +47,25 @@ try {
             <label for='pdf-template' class="input-container">Certificate Template
                 <select name="pdf-template">
                     <option value='default' disabled selected>Select A Template</option>
-                    <option value='cert-of-completion-combo'>Certificate of Completion (Combo)</option>
-                    <option value='cert-of-completion-tnt'>Certificate of Completion (TNT)</option>
-                    <option value='cert-of-completion-bh'>Certificate of Completion (BH)</option>
+
+                    <optgroup label="BadgeHire">
+                        <option value='cert-of-completion-bh'>Certificate of Completion (BH)</option>
+                    </optgroup>
+
+                    <optgroup label="TNT Security Solutions">
+                        <option value='cert-of-completion-tnt'>Certificate of Completion (TNT)</option>
+                    </optgroup>
+
+                    <optgroup label="Combo">
+                        <option value='cert-of-completion-combo'>Certificate of Completion (Combo)</option>
+                    </optgroup>
                 </select>
             </label>
 
             <!-- Optional / Hidden Fields -->
 
             <label class="input-container optional hidden" for="course-title">Course Title
-                <input type="text" name="course-title" />
+                <textarea name="course-title"></textarea>
             </label>
 
             <label class="input-container optional hidden" for="course-date">Course Date
