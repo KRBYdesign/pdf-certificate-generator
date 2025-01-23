@@ -11,4 +11,6 @@
     --ani-short: all ease 120ms;
     --ani-medium: all ease 250ms;
     --ani-long: all ease 400ms;
+
+    --shadow-light: 0 0 5px hsl(0, 0%, 92%, 35%);
 }

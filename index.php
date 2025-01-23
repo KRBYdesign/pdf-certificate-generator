@@ -32,20 +32,28 @@ try {
 
         <form action='./process.php' method="post" id="configuration-form">
 
-            <label for='file-prefix' class="input-container">File Prefix
-                <input type='text' name='file-prefix' />
+            <label for="preferred-name" class="input-catch">
+                <input type="text" name="preferred-name" autocomplete="nope"/>
             </label>
 
-            <label for='pdf-template' class="input-container">Certificate Template
-                <select name="pdf-template">
-                    <option value='default' disabled selected>Select A Template</option>
-                    <option value='premortem-training'>Premortem Training</option>
-                </select>
+            <label for='file-prefix' class="input-container">File Prefix
+                <input type='text' name='file-prefix' autocomplete="nope" placeholder="file_prefix_...csv"/>
             </label>
 
             <label for="csv-upload" class="input-container">CSV Upload
                 <input type="file" name="csv-upload" accept="text/csv, .csv"/>
             </label>
+
+            <label for='pdf-template' class="input-container">Certificate Template
+                <select name="pdf-template">
+                    <option value='default' disabled selected>Select A Template</option>
+                    <option value='cert-of-completion'>Certificate of Completion</option>
+                </select>
+            </label>
+
+            <!-- Optional / Hidden Fields -->
+
+            <label for=""
 
         </form>
 

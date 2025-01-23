@@ -11,7 +11,7 @@
     cursor: pointer;
 }
 .button:hover {
-    box-shadow: 5px 5px 8px hsl(0, 0%, 92%, 30%);
+    box-shadow: var(--shadow-light);
 }
 .button-primary {
     background-color: var(--primary);
