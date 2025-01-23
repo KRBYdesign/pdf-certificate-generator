@@ -34,7 +34,7 @@ function updateFormFields(data) {
         opt.classList.add('hidden');
     })
 
-    // show required fields
+    // get the required fields from the data
     let fields = null;
     for (let key in data) {
         if (key === "fields") {
@@ -43,15 +43,16 @@ function updateFormFields(data) {
     }
 
     if (fields) {
-        console.log('Fields: ', fields);
-        console.log(typeof fields);
+        for (let field in fields) {
+            showOptionalField(field);
+        }
     } else {
         alert("Could not load required fields.");
     }
 }
 
 function showOptionalField(field) {
-    console.log(field);
+    console.log("Showing ", field);
     let {key, value} = field;
 
     console.log("key: ", key)
