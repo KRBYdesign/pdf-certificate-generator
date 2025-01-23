@@ -35,9 +35,9 @@ function updateFormFields(data) {
     })
 
     // show required fields
-    data.fields.forEach((field) => {
-        showOptionalField(field);
-    })
+    for (let key in data) {
+        console.log(key);
+    }
 
     // clear and hide non-required fields
 }
