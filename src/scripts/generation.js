@@ -19,7 +19,7 @@ certSelection.addEventListener('change', async () => {
     // get the instructions for the selected template
     const url = `./storage/data/${selectedCertificate}.json`;
 
-    console.log('Fetching data...', url);
+    // console.log('Fetching data...', url);
     fetch(url)
         .then(res => res.json())
         .then(data => updateFormFields(data))
@@ -28,7 +28,17 @@ certSelection.addEventListener('change', async () => {
 
 function updateFormFields(data) {
     console.log("Updating form fields.");
+    // hide all fields
+    const optionalFields = document.querySelectorAll('label.optional');
+    optionalFields.forEach((opt) => {
+        opt.classList.add('hidden');
+    })
+
     // show required fields
-    console.table(data);
+    const requiredFields = data['fields'];
+
+    requiredFields.forEach((field) => {
+        console.log(field);
+    })
     // clear and hide non-required fields
 }
