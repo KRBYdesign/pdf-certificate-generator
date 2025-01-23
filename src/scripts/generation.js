@@ -53,8 +53,6 @@ function updateFormFields(data) {
 
 function showOptionalField(field) {
     console.log("Showing ", field);
-    let {key, value} = field;
-
-    console.log("key: ", key)
-    console.log("value: ", value)
+    // match the required field to the "for" tag and un-hide it
+    document.querySelector(`label[for="${field}"]`).classList.remove('hidden');
 }
