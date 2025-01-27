@@ -3,6 +3,7 @@
 require_once 'vendor/autoload.php';
 
 use App\HtmlTemplate;
+use Dompdf\Dompdf;
 
 // turn on error reporting
 errorReporting();
@@ -80,3 +81,4 @@ if (count($certificateRecipients) > 0) {
 }
 
 // generate the multi-page PDF
+$dompdf = new Dompdf();
